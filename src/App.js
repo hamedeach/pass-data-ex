@@ -108,8 +108,7 @@ class App extends Component {
         </header>
         <h2>Favorite Movies</h2>
 		<ol>
-			<li>
-			</li>
+		
 		
 		</ol>
       </div>
