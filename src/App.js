@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import MyEX from './myEx.js';
+import MoviesComponent from './moviesComponent';
 
 /*
 Use React and the data below to display a list of users alongside their favorite movies.
@@ -108,8 +109,13 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <div>
+          <MoviesComponent usersList={users} moviesList={movies} profilesdata={profiles}/>
+        </div>
+        <br></br>
+        <div>
           <MyEX usersList={users} moviesList={movies} profilesdata={profiles}/>
         </div>
+        
         
       </div>
     );
