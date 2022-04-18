@@ -118,15 +118,14 @@ class App extends Component {
         </header>
         <div>
           <h1>Movies list</h1>
-          <ol>
+          <ul>
             {
               moviesKeyArr.map((id) => (
-                console.log("movie is " + movies[id]),
                 <MoviesComponent usersList={users} movie={movies[id]} profilesdata={profiles} />
               ))
             }
 
-          </ol>
+          </ul>
         </div>
         <br></br>
         <div>
