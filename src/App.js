@@ -99,9 +99,17 @@ const movies = {
   },
 };
 
+
 class App extends Component {
   render() {
-    
+
+    // get movies object
+    let moviesArray = [];
+    const moviesKeyArr = Object.keys(movies);
+
+
+    // console.log(moviesArray);
+
     return (
       <div>
         <header className="App-header">
@@ -109,14 +117,25 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <div>
-          <MoviesComponent usersList={users} moviesList={movies} profilesdata={profiles}/>
+          <h1>Movies list</h1>
+          <ol>
+            {
+              moviesKeyArr.map((id) => (
+                console.log("movie is " + movies[id]),
+                <MoviesComponent usersList={users} movie={movies[id]} profilesdata={profiles} />
+              ))
+            }
+
+          </ol>
         </div>
         <br></br>
         <div>
-          <MyEX usersList={users} moviesList={movies} profilesdata={profiles}/>
+          <MyEX usersList={users} moviesList={movies} profilesdata={profiles} />
         </div>
-        
-        
+
+
+
+
       </div>
     );
   }
